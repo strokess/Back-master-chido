@@ -1,0 +1,59 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Compras{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/compras.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Compras</h1>
+    <span class="subheading">Registro de compras</span>
+{% endblock %}
+
+{% block content %}          
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario de Contacto</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, 
+	maximun-scale=1.0, minimun-scale=1.0">
+    {% load static %}
+    	<link href="{% static 'core/css/formularios1.css' %}" rel="stylesheet">
+</head>
+
+<body>
+	
+	<div class="contenedor">
+		<form action="" class="form">
+
+			<div class="form-row">
+    			<div class="form-group col-md-6">
+      				<label class="form-label" for="inputFechaC">Fecha</label>
+      				<input type="date" class="form-control" id="inputFechaC" >
+    			</div>
+    			<div class="form-group col-md-6">
+      				<label class="form-label" for="inputCantidadC">Cantidad</label>
+      				<input type="number" class="form-control" id="inputCantidadC" placeholder="En litros">
+    			</div>
+  			</div>
+  
+ 			<div class="form-row">
+    			<div class="form-group col-md-6">
+      				<label class="form-label"  for="inputPrecioC">Precio</label>
+      				<input type="number"  step="0.01" class="form-control" id="inputPrecioC" placeholder="17.13">
+    			</div>
+    			<div class="form-group col-md-6">
+      				<label class="form-label" for="inputCompraT">Total Compra</label>
+      				<input type="number" step="0.01" class="form-control" id="inputCompraT">
+    			</div>
+  			</div>
+
+			<div class="botones">
+   				<input type="submit" class="btn-submit" value="Ingresar">
+			</div>
+
+		</form>
+</body>
+{% endblock %}
+
+
+
+

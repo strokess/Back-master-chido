@@ -1,0 +1,58 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Employee Records</title>  
+     {% load staticfiles %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>ID cliente</th>  
+        <th>Nombre</th>  
+	<th>A.Paterno</th> 
+	<th>A.Materno</th> 
+        <th>Email</th>  
+        <th>Contacto</th>
+        <th>Calle</th>  
+	<th>Colonia</th>
+	<th>Municipio</th>
+	<th>Num Ext</th>
+	<th>Num Int</th>
+	<th>CP</th>
+	<th>Periodicidad</th> 
+        <th>Accion</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for employee in employees %}  
+    <tr>  
+        <td>{{ employee.eid }}</td>  
+        <td>{{ employee.ename }}</td>  
+	<td>{{ employee.apellido_paterno }}</td> 
+	<td>{{ employee.apellido_materno }}</td> 
+        <td>{{ employee.eemail }}</td>  
+        <td>{{ employee.econtact }}</td>
+        <td>{{ employee.calle }}</td> 
+	<td>{{ employee.colonia }}</td> 
+	<td>{{ employee.municipio }}</td>
+	<td>{{ employee.numeroE }}</td>  
+	<td>{{ employee.numeroI }}</td>
+	<td>{{ employee.cp }}</td>
+	<td>{{ employee.periodicidad }}</td> 
+	
+        <td>  
+            <a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Editar</span></a>  
+            <a href="/delete/{{ employee.id }}">Eliminar</a>  
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+<center><a href="/emp" class="btn btn-primary">Agregar nuevo registro</a></center>  
+</body>  
+</html>

@@ -1,0 +1,60 @@
+<!--Es para mandar a llamar nuestro template ya creado con base.html-->
+{% extends 'core/base.html' %}
+
+{% block title %}Reportes{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/reportes1.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Reportes</h1>
+    <span class="subheading">Selección de reportes</span>
+{% endblock %}
+
+{% block content %} 
+
+<link href="{% static 'core/css/formularios1.css' %}" rel="stylesheet">
+ <!-- Contenido Principal -->
+    <div class="container">
+	<!-- Historico de Venta -->
+	    <div class="row project">  	
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+			      <img class="img-fluid" src="{% static 'core/img/ventas3.jpg' %}" alt="">
+	      	</div>
+	        <div class="col-lg-7 col-md-8">
+	      	    <h2 class="title-R">Historico de Ventas</h2>   
+				<button type="button" class="btn btn-outline-info">Consultar</button>
+	        </div>
+	    </div>
+	<!-- Historico de compra -->
+	    <div class="row project">  	
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+			      <img class="img-fluid" src="{% static 'core/img/compras.png' %}" alt="">
+	        </div>
+	        <div class="col-lg-7 col-md-8">
+	      		<h2 class="title-R">Historico de Compras</h2>   
+	            <button type="button" class="btn btn-outline-info">Consultar</button>
+	        </div>
+	    </div>
+	<!-- Historico de Venta y Compra -->
+	    <div class="row project">  	
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+			      <img class="img-fluid" src="{% static 'core/img/ventascomp.png' %}" alt="">
+	        </div>
+	        <div class="col-lg-7 col-md-8">
+	      		<h2 class="title-R">Historico de Compras vs Ventas</h2>   
+	            <button type="button" class="btn btn-outline-info">Consultar</button>
+	        </div>
+	    </div>
+
+<!-- Registro de clientes -->
+	    <div class="row project">  	
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+			      <img class="img-fluid" src="{% static 'core/img/registroclientes.png' %}" alt="">
+	        </div>
+	        <div class="col-lg-7 col-md-8">
+	      		<h2 class="title-R">Registro de Clientes</h2>   
+	            <button type="button" class="btn btn-outline-info">Consultar</button>
+	        </div>
+	    </div>
+	</div>   
+{% endblock %}

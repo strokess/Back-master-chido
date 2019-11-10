@@ -1,0 +1,61 @@
+<!--Es para mandar a llamar nuestro template ya creado con base.html-->
+{% extends 'core/base.html' %}
+
+{% block title %}Ventas{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/ventas.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Ventas</h1>
+    <span class="subheading">Registro de ventas</span>
+{% endblock %}
+
+{% block content %}
+
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario de Contacto</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, 
+	maximun-scale=1.0, minimun-scale=1.0">
+    {% load static %}
+    	<link href="{% static 'core/css/formularios1.css' %}" rel="stylesheet">
+</head>
+
+<body>
+	
+	<div class="contenedor">
+		<form action="" class="form">
+
+			<div class="form-row">
+    			<div class="form-group col-md-6">
+      				<label class="form-label" for="inputFechaV">Fecha</label>
+      				<input type="date" class="form-control" id="inputFechaV" >
+    			</div>
+    			<div class="form-group col-md-6">
+      				<label class="form-label" for="inputCantidadV">Cantidad</label>
+      				<input type="number" class="form-control" id="inputCantidadV" placeholder="En litros">
+    			</div>
+  			</div>
+  
+ 			<div class="form-row">
+    			<div class="form-group col-md-6">
+      				<label class="form-label"  for="inputPrecioV">Precio</label>
+      				<input type="number"  step="0.01" class="form-control" id="inputPrecioV" placeholder="20.13">
+    			</div>
+    			<div class="form-group col-md-6">
+      				<label class="form-label" for="inputVentaT">Total Venta</label>
+      				<input type="number" step="0.01" class="form-control" id="inputVentaT">
+    			</div>
+  			</div>
+
+			<div class="botones">
+   				<input type="submit" class="btn-submit" value="Ingresar">
+			</div>
+
+		</form>
+</body>
+{% endblock %}
+
+
+
+

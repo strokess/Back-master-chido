@@ -1,0 +1,130 @@
+<!--Es para mandar a llamar nuestro template ya creado con base.html-->
+{% extends 'core/base.html' %}
+    
+{% block title %}Portada{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/visitas.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Control de visitas</h1>
+    <span class="subheading">información de clientes</span>
+{% endblock %}
+
+
+{% block content %} 
+
+<head>
+    {% load static %}
+    <link href="{% static 'core/css/formularios1.css' %}" rel="stylesheet">    
+</head>
+
+    <div class="fecha">
+        <script>
+            (function()
+            {
+                var fecha=new Date();
+                fecha.toDateString();
+                var year=fecha.getFullYear();
+                var mes=fecha.getMonth();
+                var dia=fecha.getDate();
+                var dayweek=fecha.getDay();
+                var diasSemana=["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado"]
+                var mesletra=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
+                document.write("Vistas correspondientes del día: "+diasSemana[dayweek]+", "+dia+" de "+mesletra[mes]+" del "+year);
+            }())
+        </script>
+    </div>
+
+    <div class="letraTabla">
+    <table class="table table-striped table-fixed">
+    <thead class="table-light">
+        <tr style="width: 1050px">
+        <th style="width: 25px" scope="col">#</th>
+        <th style="width: 200px" scope="col">Nombre</th>
+        <th style="width: 150px" scope="col">A.Parterno</th>
+        <th style="width: 150px" scope="col">A.Materno</th>
+        <th style="width: 300px" scope="col">Dirección</th>
+        <th style="width: 200px" scope="col">Colonia</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="width: 1050px">
+        <td style="width: 25px" scope="col">1</td>
+        <td style="width: 200px" scope="col">Angel</td>
+        <td style="width: 150px" scope="col">Pérez</td>
+        <td style="width: 150px" scope="col">Hernández</td>
+        <td style="width: 300px" scope="col">San Miguel de Quevedo</td>
+        <td style="width: 200px" scope="col">La Universal</td>
+        </tr>
+        <tr style="width: 1050px">
+        <td style="width: 25px" scope="col">2</td>
+        <td style="width: 200px" scope="col">Angel Fernando</td>
+        <td style="width: 150px" scope="col">Pérez</td>
+        <td style="width: 150px" scope="col">López</td>
+        <td style="width: 300px" scope="col">San Juan</td>
+        <td style="width: 200px" scope="col">Valle de México</td>
+        </tr>
+        <tr style="width: 1050px">
+        <td style="width: 25px">3</td>
+        <td style="width: 200px">Miguel</td>
+        <td style="width: 150px">Pérez</td>
+        <td style="width: 150px">Hernández</td>
+        <td style="width: 300px">Charles de Gaulle No. 12</td>
+        <td style="width: 200px">Valle de México</td>
+        </tr>
+        <tr style="width: 1050px">
+        <td style="width: 25px" scope="col">4</td>
+        <td style="width: 200px" scope="col">Angel</td>
+        <td style="width: 150px" scope="col">Pérez</td>
+        <td style="width: 150px" scope="col">Hernández</td>
+        <td style="width: 300px" scope="col">San Miguel de Quevedo</td>
+        <td style="width: 200px" scope="col">La Universal</td>
+        </tr>
+        <tr style="width: 1050px">
+        <td style="width: 25px" scope="col">5</td>
+        <td style="width: 200px" scope="col">Angel Fernando</td>
+        <td style="width: 150px" scope="col">Pérez</td>
+        <td style="width: 150px" scope="col">López</td>
+        <td style="width: 300px" scope="col">San Juan</td>
+        <td style="width: 200px" scope="col">Valle de México</td>
+        </tr>
+        <tr style="width: 1050px">
+        <td style="width: 25px">6</td>
+        <td style="width: 200px">Miguel</td>
+        <td style="width: 150px">Pérez</td>
+        <td style="width: 150px">Hernández</td>
+        <td style="width: 300px">Charles de Gaulle No. 12</td>
+        <td style="width: 200px">Valle de México</td>
+        </tr>
+        <tr style="width: 1050px">
+        <td style="width: 25px" scope="col">7</td>
+        <td style="width: 200px" scope="col">Angel</td>
+        <td style="width: 150px" scope="col">Pérez</td>
+        <td style="width: 150px" scope="col">Hernández</td>
+        <td style="width: 300px" scope="col">San Miguel de Quevedo</td>
+        <td style="width: 200px" scope="col">La Universal</td>
+        </tr>
+        <tr style="width: 1050px">
+        <td style="width: 25px" scope="col">8</td>
+        <td style="width: 200px" scope="col">Angel Fernando</td>
+        <td style="width: 150px" scope="col">Pérez</td>
+        <td style="width: 150px" scope="col">López</td>
+        <td style="width: 300px" scope="col">San Juan</td>
+        <td style="width: 200px" scope="col">Valle de México</td>
+        </tr>
+        <tr style="width: 1050px">
+        <td style="width: 25px">9</td>
+        <td style="width: 200px">Miguel</td>
+        <td style="width: 150px">Pérez</td>
+        <td style="width: 150px">Hernández</td>
+        <td style="width: 300px">Charles de Gaulle No. 12</td>
+        <td style="width: 200px">Valle de México</td>
+        </tr>
+    </tbody>
+    </table>
+    <div>
+
+
+{% endblock %}
+
+

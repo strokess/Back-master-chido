@@ -1,0 +1,110 @@
+<!--Es para mandar a llamar nuestro template ya creado con base.html-->
+{% extends 'core/base.html' %}
+
+{% block title %}Clientes{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/clientes.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Clientes</h1>
+    <span class="subheading">Registro de clientes</span>
+{% endblock %}
+
+{% block content %}
+
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario de Contacto</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, 
+	maximun-scale=1.0, minimun-scale=1.0">
+    {% load static %}
+    	<link href="{% static 'core/css/formularios1.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+<form method="POST" class="post-form" action="/emp">  
+        {% csrf_token %}  
+ 
+  <div class="contenedor">
+		<form action="" class="form">
+		  <div class="form-header">
+				<h1 class="form-title">C<span>ontacto</span></h1>
+				
+  		<div class="form-row">
+        <div class="form-group col-md-4">
+      			<label class="form-label" for="inputNombre">Nombre</label>
+              {{ form.ename }}
+    		</div>
+    		<div class="form-group col-md-4">
+      			<label class="form-label" for="inputApaterno">A.Parterno</label>
+      				{{ form.apellido_paterno }}
+    		</div>
+        <div class="form-group col-md-4">
+      			<label class="form-label"  for="inputAmaterno">A.Materno</label>
+      				{{ form.apellido_materno }}
+    		</div>
+  		</div>
+
+      <div class="form-row">
+    		<div class="form-group col-md-4">
+      		<label class="form-label" for="inputTelefono">Telefono</label>
+      			{{ form.econtact }} 
+    			</div>
+        <div class="form-group col-md-4">
+      		<label class="form-label" for="inputCorreo">Correo</label>
+      			{{ form.eemail }}   
+    		</div>
+        <div class="form-group col-md-4">
+      			<label class="form-label" for="inputPeriodo">Periodo</label>
+      				{{ form.periodicidad }}     
+    		</div>
+  		</div>
+
+      <div class="form-row">
+    		<div class="form-group col-md-4">
+      		<label class="form-label" for="inputCalle">Calle</label>
+      			{{ form.calle }}  
+    		</div>
+        <div class="form-group col-md-4">
+      		<label class="form-label" for="inputColonia">Colonia</label>
+      			{{ form.colonia }}   
+    		</div>
+        <div class="form-group col-md-4">
+      		<label class="form-label" for="inputMunicipio">Muncipio</label>
+      			{{ form.municipio }}    
+    		</div>
+  		</div>
+       
+      <div class="form-row">
+    		<div class="form-group col-md-4">
+      		<label class="form-label" for="inputNE">N.Exterior</label>
+      			{{ form.numeroE }} 
+    		</div>
+        <div class="form-group col-md-4">
+      	  <label class="form-label" for="inputNI">N.Interio</label>
+      		  {{ form.numeroI }}   
+    		</div>
+        <div class="form-group col-md-4">
+      		<label class="form-label" for="inputCP">Codigo Postal</label>
+      			{{ form.cp }}    
+    		</div>
+  		</div>
+    
+    </form> 
+  </div>
+</form>
+
+      <div class="form-group row">  
+        <label class="col-sm-1 col-form-label"></label>  
+          <div class="col-sm-4">  
+            <button type="submit" class="btn btn-primary">Registrar</button>  
+          </div>  
+      </div> 
+    
+</body>
+
+{% endblock %}    
+
+
+

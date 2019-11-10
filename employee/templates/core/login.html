@@ -1,0 +1,36 @@
+{% if messg %}
+<script>
+    alert('{{ messg }}');
+</script>
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    {% load static %}
+    <link href="{% static 'core/css/logs.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="login-box">
+        <img class="avatar" src="{% static 'core/img/naturalgas.png' %}" alt="Imagen de ususario">
+        <h1>Login</h1>
+        <form  action="/visitas/" method="post" >
+            {% csrf_token %}
+            <!--Nombre de usuario-->
+           <label for="username">Email</label>
+            <input type="email" name="email">
+            <!--Contraseña-->
+            <label for ="password">Contraseña</label>
+            <input type="password" name="pass">
+            <input type="submit" value="Iniciar Sesión" href="{% url 'visitas' %}">
+            <a href="mailto:angel_perezh3@outlook.es,castillokevin37@gmial.com?cc=rangeel82@gmail.com,luis.cuandon.salazar@gmail.com&Subject=Cambio%20de%20contraseña%20gas%20LP">¿Olvidaste tu contraseña?</a><br>
+            <a href="mailto:angel_perezh3@outlook.es,castillokevin37@gmial.com?cc=rangeel82@gmail.com,luis.cuandon.salazar@gmail.com&Subject=Solicitud%20de%20Usuario%20gas%20LP">¿No tienes cuenta?</a>
+        </form>
+    </div>
+    
+</body>
+</html>
